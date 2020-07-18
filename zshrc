@@ -100,6 +100,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Custom Envillh
 alias rbt="sudo systemctl reboot"
-alias trn=transmission-cli
 alias vv="vimv -av -e vim"
 alias zrc="vim ~/.zshrc && source ~/.zshrc"

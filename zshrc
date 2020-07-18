@@ -98,7 +98,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Custom Envillh
+# Custom Aliases
 alias rbt="sudo systemctl reboot"
 alias vv="vimv -av -e vim"
 alias zrc="vim ~/.zshrc && source ~/.zshrc"
+
+alias cdg='cd "$(basename "$_" .git)"'
+alias gacp='f(){ git add . && git commit -m "$1" && git push origin $2; unset -f f; }; f'
+alias kvlc="pgrep vlc | xargs kill -9"
+
+# APT for Debain based systems
+alias supg='sudo apt update && sudo apt upgrade -y && sudo apt autoremove'
+alias supd='sudo apt-get update'
+alias inst='sudo apt-get install'

@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 alias rbt="sudo systemctl reboot"
 alias vv="vimv -av -e vim"
 alias zrc="vim ~/.zshrc && source ~/.zshrc"
+alias suzrc="sudo vim ~/.zshrc && sudo source ~/.zshrc"
 
 alias cdg='cd "$(basename "$_" .git)"'
 alias gacp='f(){ git add . && git commit -m "$1" && git push origin $2; unset -f f; }; f'
@@ -111,3 +112,17 @@ alias kvlc="pgrep vlc | xargs kill -9"
 alias supg='sudo apt update && sudo apt upgrade -y && sudo apt autoremove'
 alias supd='sudo apt-get update'
 alias inst='sudo apt-get install'
+
+alias findf='sudo find / -iname'
+alias finda='sudo find / | grep -i'
+
+alias vpnc='nordvpn connect'
+alias vpnd='nordvpn disconnect'
+alias vpnc-us='nordvpn connect United_States'
+
+export QT_QPA_PLATFORMTHEME='qt5ct'
+
+alias ccr='f(){ g++ --std=c++11 -Wall $1 && ./a.out $2; unset -f f; }; f'
+alias gr++='f(){ g++ --std=c++20 -Wall $1 && ./a.out $2; unset -f f; }; f'
+
+alias ytd='youtube-dl -f best --cookies /home/a/cookies.txt --restrict-filenames'

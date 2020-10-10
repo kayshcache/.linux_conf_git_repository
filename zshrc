@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/sbin:$PATH
+export PATH=/sbin:/home/a/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/a/.oh-my-zsh"
@@ -86,6 +86,8 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+export QT_QPA_PLATFORMTHEME='qt5ct'
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -100,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Custom Aliases
 alias rbt="sudo systemctl reboot"
+alias shd="sudo shutdown now"
 alias vv="vimv -av -e vim"
 alias zrc="vim ~/.zshrc && source ~/.zshrc"
 alias suzrc="sudo vim ~/.zshrc && sudo source ~/.zshrc"
@@ -111,7 +114,9 @@ alias kvlc="pgrep vlc | xargs kill -9"
 # APT for Debain based systems
 alias supg='sudo apt update && sudo apt upgrade -y && sudo apt autoremove'
 alias supd='sudo apt-get update'
-alias inst='sudo apt-get install'
+alias install='sudo apt-get install'
+alias remove='sudo apt remove'
+alias purge='sudo apt purge'
 
 alias findf='sudo find / -iname'
 alias finda='sudo find / | grep -i'
@@ -120,9 +125,17 @@ alias vpnc='nordvpn connect'
 alias vpnd='nordvpn disconnect'
 alias vpnc-us='nordvpn connect United_States'
 
-export QT_QPA_PLATFORMTHEME='qt5ct'
 
 alias ccr='f(){ g++ --std=c++11 -Wall $1 && ./a.out $2; unset -f f; }; f'
 alias gr++='f(){ g++ --std=c++20 -Wall $1 && ./a.out $2; unset -f f; }; f'
 
 alias ytd='youtube-dl -f best --cookies /home/a/cookies.txt --restrict-filenames'
+alias ytdb0='youtube-dl -f best --cookies /home/a/cookies.txt --restrict-filenames --batch-file b0'
+alias ytdb1='youtube-dl -f best --cookies /home/a/cookies.txt --restrict-filenames --batch-file b1'
+
+alias prime='/opt/google/chrome/google-chrome --profile-directory=Default --app-id=opcphpnjbcikadmhphfngbokieemooem'
+alias netflix='/opt/google/chrome/google-chrome --profile-directory=Default --app-id=ajncmjojnddbipcddbphleijkdchpamf'
+
+alias ksaws='ssh -i /home/a/centos0.pem ec2-user@13.239.17.202'
+alias jno='jupyter notebook --ip=0.0.0.0 --port=8080'
+alias nlpv='source /home/a/nlp-algorithm-design/nlp_venv/bin/activate'
